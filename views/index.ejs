@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENGIMA | ASE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600&family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* GLOBAL RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #1a1a1a;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* UNIQUE HEADING STYLE */
+    h1, h2, .display-5 {
+      font-family: 'Syne', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      color: #1a1a1a;
+    }
+
+    /* NEW UNIQUE STYLE FOR WELCOME TEXT */
+    .welcome-title {
+      font-size: clamp(2rem, 6vw, 3.5rem) !important; 
+      font-family: 'Cormorant Garamond', serif !important;
+      font-style: italic;
+      text-transform: none !important;
+      letter-spacing: 0px !important;
+      margin-top: 20px;
+      line-height: 1.1;
+    }
+
+    /* LOGO SPECIFIC STYLING - UPDATED FOR SIZE AND ROUNDED EDGES */
+    .logo-square {
+      width: 160px; /* Made a little bigger */
+      height: 160px; /* Made a little bigger */
+      object-fit: contain;
+      border-radius: 20px; /* Rounded edges */
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .logo-square:hover {
+      transform: scale(1.2); /* Makes it come forward */
+      box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+    }
+
+    /* SECTIONS */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+
+    .hero-section {
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .content-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      margin-bottom: 100px;
+      flex-wrap: wrap;
+    }
+
+    .content-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    /* IMAGE STYLING */
+    .img-wrapper {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .custom-img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 20px;
+      box-shadow: 20px 20px 0px #e0e0e0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .custom-img:hover {
+      transform: translate(-10px, -10px);
+      box-shadow: 30px 30px 0px #d4d4d4;
+    }
+
+    .text-wrapper {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #1a1a1a;
+      margin-top: 10px;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #333;
+    }
+
+    .register-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: #1a1a1a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: transform 0.2s;
+    }
+
+    .register-link:hover {
+      transform: scale(1.05);
+      background-color: #333;
+    }
+
+    .meta-info {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .content-row { text-align: center; }
+      .section-title::after { margin: 10px auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container hero-section fade-in">
+    <img src="img/last.png" alt="ASE Logo" class="logo-square">
+    <h1 class="welcome-title">Welcome to ASE</h1>
+  </div>
+
+  <div class="container">
+    
+    <div class="content-row fade-in">
+      <div class="img-wrapper">
+        <img src="img/RC.JPEG" class="custom-img" alt="Recruitment">
+      </div>
+      <div class="text-wrapper">
+        <h2 class="section-title">Recruitments Are Back</h2>
+        <p class="lead">
+          Join a forward-thinking community dedicated to fostering innovation in engineering and data sciences. We are looking for passionate individuals to join our technical, media, and event management teams.
+        </p>
+        <div class="meta-info">
+          📅 31st January | 1:30 PM<br>
+          📍 Idealab, Room 344 (D Block)
+        </div>
+        <a href="https://forms.gle/LryTHV85ga86nPAN7" target="_blank" class="register-link">Register Now</a>
+      </div>
+    </div>
+
+    <div class="content-row reverse fade-in">
+      <div class="img-wrapper">
+        <img src="img/Q3.jpeg" class="custom-img" alt="KREA AI">
+      </div>
+      <div class="text-wrapper">
+        <h2 class="section-title">KREA AI</h2>
+        <p class="lead">
+          The ASE Club prioritizes technical growth by integrating modern generative tools. We explore KREA AI to push the boundaries of real-time art and visual design within our technology ecosystem.
+        </p>
+      </div>
+    </div>
+
+    <div class="content-row fade-in">
+      <div class="img-wrapper">
+        <img src="img/Q4.jpeg" class="custom-img" alt="Perplexity">
+      </div>
+      <div class="text-wrapper">
+        <h2 class="section-title">Perplexity AI</h2>
+        <p class="lead">
+          Verified research is the backbone of engineering excellence. We utilize Perplexity AI to ensure our projects are grounded in the latest, most accurate technical data available.
+        </p>
+      </div>
+    </div>
+
+    <div class="content-row reverse fade-in">
+      <div class="img-wrapper">
+        <img src="img/3h.jpeg" class="custom-img" alt="Veo 3">
+      </div>
+      <div class="text-wrapper">
+        <h2 class="section-title">VEO 3</h2>
+        <p class="lead">
+          From text to video, we explore the future of content creation. Led by Kalyan Reddy Kandula, our team experiments with Veo 3 to create immersive digital experiences.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

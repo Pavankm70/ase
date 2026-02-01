@@ -1,0 +1,163 @@
+<style>
+    body {
+        background-color: #ffffff;
+        font-family: sans-serif;
+        padding: 50px 0;
+    }
+
+    .title {
+        color: rgba(15, 30, 30, 0.642);
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    /* Container for all cards */
+    .members-container {
+        display: flex;
+        flex-wrap: wrap; /* allows wrapping to next line */
+        justify-content: center; /* centers the cards horizontally */
+        gap: 20px; /* space between cards */
+        padding: 0 20px;
+    }
+
+    .member-card {
+        background-color: rgb(33, 29, 29);
+        border-radius: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        color: white;
+        width: 250px; /* smaller width so 4 fit on large screen */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .member-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 0px 25px rgba(138, 43, 226, 0.6);
+    }
+
+    .profile-img {
+    width: 120px;         /* make width = height */
+    height: 120px;        /* make height = width */
+    border-radius: 50%;
+    background-image: url("/img/PROF.png");
+  background-color: rgb(243,243,243);
+   /* this makes it perfectly circular */
+    border: 4px solid #8a2be2;
+    background-color: white;
+    margin-bottom: 20px;
+    object-fit: cover;    /* ensures the image fills the circle without distortion */
+}
+
+    
+
+    .member-name {
+        color: #8a2be2;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .member-role {
+        color: #ffcc00;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+
+    .member-since {
+        color: #aaaaaa;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    .member-desc {
+        color: #dddddd;
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+</style>
+
+<h1 class="title">ASE Club Members</h1>
+
+<div class="members-container">
+    <div class="member-card">
+        <img src="PROF.png" class="profile-img" alt="Profile">
+        <div class="member-name">Kalyan Reddy Kandula</div>
+        <div class="member-role">Head</div>
+        <div class="member-since">Since: 2022</div>
+        <p class="member-desc">
+            Data Engineer and core member of the Data & AI community.
+        </p>
+    </div>
+
+    <div class="member-card">
+        <img  src="PROF.png" class="profile-img" alt="Profile">
+        <div class="member-name">Jane Doe</div>
+        <div class="member-role">Member</div>
+        <div class="member-since">Since: 2023</div>
+        <p class="member-desc">
+            AI Enthusiast and event organizer.
+        </p>
+    </div>
+
+    <div class="member-card">
+        <img src="PROF.png" class="profile-img" alt="Profile">
+        <div class="member-name">John Smith</div>
+        <div class="member-role">Member</div>
+        <div class="member-since">Since: 2021</div>
+        <p class="member-desc">
+            Data Analyst and workshop coordinator.
+        </p>
+    </div>
+
+    <div class="member-card">
+        <img src="PROF.png" class="profile-img" alt="Profile">
+        <div class="member-name">Alice Johnson</div>
+        <div class="member-role">Member</div>
+        <div class="member-since">Since: 2022</div>
+        <p class="member-desc">
+            Machine Learning Enthusiast and speaker.
+        </p>
+    </div>
+
+    <!-- Next row of 4 cards -->
+    <div class="member-card">
+        <img src="https://via.placeholder.com/150" class="profile-img" alt="Profile">
+        <div class="member-name">Bob Williams</div>
+        <div class="member-role">Member</div>
+        <div class="member-since">Since: 2023</div>
+        <p class="member-desc">
+            Big Data Specialist and content creator.
+        </p>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/150" class="profile-img" alt="Profile">
+        <div class="member-name">Emma Brown</div>
+        <div class="member-role">Member</div>
+        <div class="member-since">Since: 2021</div>
+        <p class="member-desc">
+            Python Developer and AI researcher.
+        </p>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/150" class="profile-img" alt="Profile">
+        <div class="member-name">Michael Lee</div>
+        <div class="member-role">Member</div>
+        <div class="member-since">Since: 2022</div>
+        <p class="member-desc">
+            Data Science Enthusiast and mentor.
+        </p>
+    </div>
+
+    <div class="member-card">
+        <img src="https://via.placeholder.com/150" class="profile-img" alt="Profile">
+        <div class="member-name">Sophia Taylor</div>
+        <div class="member-role">Member</div>
+        <div class="member-since">Since: 2023</div>
+        <p class="member-desc">
+            AI Content Creator and project lead.
+        </p>
+    </div>
+</div>

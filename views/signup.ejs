@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup | ASE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+/* 🌈 PAGE BACKGROUND */
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top left,#dbeafe,transparent 40%),
+    radial-gradient(circle at bottom right,#bfdbfe,transparent 40%),
+    linear-gradient(120deg,#f8fbff,#ffffff);
+  background-size:200% 200%;
+  animation:bgMove 10s ease infinite;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* ❌ NAVBAR NOT TOUCHED */
+
+/* ✅ CENTER WRAPPER */
+.main-wrapper{
+  min-height: calc(100vh - 90px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* 🧊 CARD */
+.signup-card{
+  background:rgba(255,255,255,0.9);
+  width:360px;
+  padding:38px 32px;
+  border-radius:22px;
+  box-shadow:0 25px 55px rgba(37,99,235,0.18);
+  text-align:center;
+  backdrop-filter:blur(14px);
+  animation:fadeUp 0.6s ease;
+  transition:0.35s ease;
+}
+
+.signup-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 35px 75px rgba(37,99,235,0.28);
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* TITLE */
+.signup-card h2{
+  color:#2563eb;
+  font-size:30px;
+  margin-bottom:28px;
+  font-weight:700;
+}
+
+/* LABELS */
+.signup-card label{
+  display:block;
+  text-align:left;
+  margin-bottom:6px;
+  font-size:14px;
+  font-weight:600;
+  color:#374151;
+}
+
+/* INPUTS */
+.signup-card input{
+  width:100%;
+  padding:14px 15px;
+  border-radius:12px;
+  border:1.6px solid #e5e7eb;
+  margin-bottom:20px;
+  font-size:14px;
+  background:#f9fafb;
+  transition:0.25s ease;
+}
+
+.signup-card input:hover{
+  transform:translateY(-1px);
+}
+
+.signup-card input:focus{
+  outline:none;
+  border-color:#2563eb;
+  background:#ffffff;
+  box-shadow:0 0 0 4px rgba(37,99,235,0.18);
+}
+
+/* BUTTON */
+.signup-card button{
+  width:100%;
+  padding:15px;
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:white;
+  border:none;
+  border-radius:14px;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s ease;
+  box-shadow:0 12px 28px rgba(37,99,235,0.35);
+  position:relative;
+  overflow:hidden;
+}
+
+.signup-card button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 18px 40px rgba(37,99,235,0.45);
+}
+
+.signup-card button:active{
+  transform:scale(0.96);
+}
+
+/* FOOTER */
+.signup-footer{
+  margin-top:22px;
+  font-size:14px;
+  color:#6b7280;
+}
+
+.signup-footer a{
+  color:#2563eb;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.signup-footer a:hover{
+  text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔒 NAVBAR EXISTS ABOVE (UNCHANGED) -->
+
+<div class="main-wrapper">
+  <div class="signup-card">
+
+    <h2>Sign Up</h2>
+
+    <form id="signupForm">
+      <label>Name</label>
+      <input type="text" placeholder="Enter your name">
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter password">
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="signup-footer">
+      Already have an account? <a href="/login">Login</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.getElementById("signupForm").addEventListener("submit", function(e) {
+    e.preventDefault();       // stop page reload
+    window.location.href = "/"; // redirect to index page
+  });
+</script>
+
+</body>
+</html>
